@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: CoolProject_production
-  username: CoolProject
-  password: <%= ENV['COOLPROJECT_DATABASE_PASSWORD'] %>
+  username: andrew
+  password:
