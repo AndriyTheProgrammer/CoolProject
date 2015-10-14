@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: CoolProject_production
-  username: andrew
-  password:
