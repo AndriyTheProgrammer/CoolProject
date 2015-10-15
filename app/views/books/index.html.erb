@@ -1,1 +1,11 @@
 <h1>Hello World</h1>
+<%= render 'log_in_out' %>
+<% if user_signed_in? %>
+<h3><%= link_to('New book', new_book_path)  %></h3>
+    <% end %>
+<% @books.each do |book| %>
+    <h3><%= book.title %></h3>
+    <h4><%= book.author %></h4>
+    <h4><%= book.description %></h4>
+    <%= button_to 'Read it', book, :method => :get %>
+<% end %>

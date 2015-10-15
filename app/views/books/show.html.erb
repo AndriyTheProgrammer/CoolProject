@@ -1,0 +1,15 @@
+<h1>Hello World</h1>
+<% if user_signed_in? %>
+    <h2>Hello <%= current_user.email%></h2>
+
+    <h3><%= @book.title %></h3>
+    <h4><%= @book.author %></h4>
+    <h4><%= @book.description %></h4>
+    <%= button_to 'This is shit, delete!', @book, :method => :delete %>
+    <p><%= @book.book_text %></p>
+<% else %>
+    <h1>
+      Fuck out to login page! You must be logged to read this book
+      <%= link_to('Login', new_user_session_path)  %>
+    </h1>
+<% end %>
